@@ -19,6 +19,14 @@
   }
 }
 
+.orange {
+  background-color: #F08774;
+}
+
+.blue {
+  background-color: cadetblue;
+}
+
 .flexCenter {
   display: flex;
   flex-direction: column-reverse;
