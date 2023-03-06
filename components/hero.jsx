@@ -1,8 +1,8 @@
-const Hero = () => {
+const Hero = ({ title, subtitle }) => {
     return (
         <div>
-            <h1>Kai Itakura</h1>
-            <p>Web Creator</p>
+            <h1>{title}</h1>
+            {subtitle && <p>{subtitle}</p>}
         </div>
     );
 }
