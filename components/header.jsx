@@ -1,11 +1,14 @@
 import Nav from "./nav";
 import SnsLinks from "./sns-links";
+import classes from 'styles/header.module.scss';
 
 const Header = () => {
     return (
         <header>
-            <Nav />
-            <SnsLinks />
+            <div className={classes.flexContainer}>
+                <Nav />
+                <SnsLinks />
+            </div>
         </header>
     );
 }

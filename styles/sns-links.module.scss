@@ -3,7 +3,7 @@
 .list {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 3vw;
     margin-right: 40px;
     text-shadow: 40px 20px 100px rgb(7 33 66 / 50%);
 
@@ -14,7 +14,7 @@
 
 .icon {
     font-size: 4rem;
-    // color: #efece9;
+    color: #efece9;
 
     @include mix.mq(sp) {
         font-size: 3rem;

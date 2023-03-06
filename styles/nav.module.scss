@@ -1,7 +1,11 @@
+@use 'variable' as var;
+
 .list {
     display: flex;
     justify-content: flex-end;
     gap: 5vw;
     margin-left: 5vw;
     font-size: 1.8rem;
+    color: var.$mainColor;
+    text-shadow: 5px 2px 100px rgb(7 33 66 / 50%);
 }
