@@ -1,3 +1,16 @@
+/* @mixin fontFace {
+    @font-face {
+        font-family: 'Pacifico';
+        src: url(../font/Pacifico-Regular.ttf) format('truetype');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url(../font/Roboto-Medium.ttf) format('truetype');
+        font-display: swap;
+    }
+} */
 html {
   font-size: 62.5%;
   /* 16px * 62.5% = 10px */
@@ -26,6 +39,11 @@ body {
 
 main {
   overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Pacifico";
 }
 
 a {
