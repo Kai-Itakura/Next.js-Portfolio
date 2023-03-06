@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    box-sizing: border-box;
     color: #333;
     /* RGB */
     font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
@@ -63,6 +64,11 @@ h2 {
 
 p {
     line-height: 2;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 li {

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import classes from 'styles/nav.module.scss';
 
 const Nav = () => {
     return (
         <nav>
-            <ul>
+            <ul className={classes.list}>
                 <li>
                     <Link href='/'>Top</Link>
                 </li>
