@@ -16,11 +16,10 @@
     }
 }
 
-.text {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.flexCenter {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 60vh;
 
     @include mix.mq(sp) {
         height: 65%;
