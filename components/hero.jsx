@@ -1,4 +1,4 @@
-const Hero = ({ title, subtitle }) => {
+const Hero = ({ title, subtitle = false }) => {
     return (
         <div>
             <h1>{title}</h1>
