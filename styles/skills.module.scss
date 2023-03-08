@@ -1,0 +1,21 @@
+@use 'mixin' as mix;
+
+.wrapper {
+    padding: 100px 30px 10px;
+
+    @include mix.mq(sp) {
+        padding: 60px 24px 0;
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    @include mix.mq(sp) {
+        margin-top: 60px;
+        display: block;
+    }
+}
