@@ -31,6 +31,9 @@
 .flexContainer a {
   font-size: 2.5rem;
 }
+.flexContainer a:hover {
+  opacity: 1;
+}
 @media screen and (max-width: 767px) {
   .flexContainer a {
     font-size: 1.8rem;
