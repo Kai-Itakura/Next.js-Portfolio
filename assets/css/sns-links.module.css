@@ -19,6 +19,7 @@
 .icon {
   font-size: 4rem;
   color: #efece9;
+  z-index: 200;
 }
 @media screen and (max-width: 767px) {
   .icon {

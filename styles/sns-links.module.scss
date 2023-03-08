@@ -15,6 +15,7 @@
 .icon {
     font-size: 4rem;
     color: #efece9;
+    z-index: 200;
 
     @include mix.mq(sp) {
         font-size: 3rem;
