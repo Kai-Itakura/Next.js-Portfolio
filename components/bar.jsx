@@ -5,7 +5,6 @@ import classes from 'styles/bar.module.scss';
 const Bar = ({ title, src, dataPer }) => {
     const refBar = useRef([]);
     const refNum = useRef([]);
-    // const [count, setCount] = useState(0);
 
     useEffect(() => {
         const allBar = document.querySelectorAll('[data-percentage]');
@@ -27,13 +26,13 @@ const Bar = ({ title, src, dataPer }) => {
                     const num = refNum.current[i];
                     const percentageVal = refBar.current[i].dataset.percentage;
                     const addStyle = () => {
-                        bar.style.width = `${count}%`; 
+                        bar.style.width = `${count}%`;
                         num.textContent = `${count}%`;
                     }
 
                     let count = 0;
                     const intervalId = setInterval(() => {
-                        count ++;
+                        count++;
                         addStyle();
                         if (count >= percentageVal) {
                             clearInterval(intervalId);
@@ -62,10 +61,8 @@ const Bar = ({ title, src, dataPer }) => {
                     className={classes.skillBar}
                     data-percentage={dataPer}
                     ref={refBar}
-                    // style={{ width: `${count}%` }}
                 />
                 <p className={classes.skillNum}>
-                    {/* {count}% */}
                     <span ref={refNum} data-num={dataPer} />
                 </p>
             </div>
