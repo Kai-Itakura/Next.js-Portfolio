@@ -19,7 +19,6 @@ const Header = () => {
     }, [])
 
     useEffect(() => {
-        console.log(scrollY)
         if (scrollY > 450) {
             setHeaderColor('rgb(58, 61, 62, .5)');
         } else {
