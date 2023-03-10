@@ -1,3 +1,8 @@
+@charset "UTF-8";
+/* メディアクエリ */
+/* 両端ん揃え */
+/* 横並び（基本形） */
+/* 横並び（中央揃え） */
 html {
   font-size: 62.5%;
   /* 16px * 62.5% = 10px */
@@ -69,4 +74,8 @@ ul {
 
 li {
   list-style: none;
+}
+
+span img {
+  transition: 0.5s;
 }

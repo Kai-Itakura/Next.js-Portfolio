@@ -14,6 +14,7 @@ const Profile = () => {
                         layout='fill'
                         objectFit='cover'
                         sizes='(min-width: 768px) 440px, 80%'
+                        placeholder='blur'
                     />
                 </figure>
                 <div className={classes.description}>

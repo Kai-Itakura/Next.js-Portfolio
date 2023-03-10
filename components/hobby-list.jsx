@@ -10,6 +10,7 @@ const HobbyList = ({ src, title, desc }) => {
                     alt={title}
                     layout='fill'
                     objectFit='cover'
+                    placeholder='blur'
                 />
             </figure>
             <h3 className={classes.title}>{title}</h3>
