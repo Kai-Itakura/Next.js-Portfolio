@@ -1,10 +1,16 @@
 import Hero from "@/components/hero";
+import Meta from "@/components/meta";
 
 const Home = () => {
-  return <Hero
-    title='Kai Itakura'
-    subtitle='Web Creator'
-  />;
+  return (
+    <>
+      <Meta />
+      <Hero
+        title='Kai Itakura'
+        subtitle='Web Creator'
+      />
+    </>
+  );
 }
 
 export default Home;
