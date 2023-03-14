@@ -26,6 +26,6 @@
     color: var.$mainColor;
 
     @include mix.mq(sp) {
-        font-size: 8vw;
+        font-size: min(9vw, 5rem);
     }
 }
