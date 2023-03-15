@@ -1,13 +1,19 @@
+import Meta from "@/components/meta";
 import WorksBody from "@/components/works-body";
 import WorksHeader from "@/components/works-header";
 import WorksImage from "@/components/works-image";
 import { getPostBySlug } from "@/lib/api";
+import { getPlaiceholder } from "plaiceholder";
 
 const Sixhelmets = ({
-    title, tools, time, desc, url, mockUp, img1, img2, heroImg
+    title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc
 }) => {
     return (
         <>
+            <Meta
+                pageTitle={title}
+                pageDesc={metaDesc}
+            />
             <WorksHeader title={title} heroImg={heroImg} />
             <WorksBody
                 title={title}
@@ -25,6 +31,17 @@ export const getStaticProps = async () => {
 
     const post = await getPostBySlug(slug);
 
+    const metaDesc = post.description.slice(0, 80) + '...';
+
+    const images = [post.mockUpImage, post.image1, post.image2, post.heroImage];
+    for (let i = 0; i < images.length; i++) {
+        const { base64 } = await getPlaiceholder(images[i].url);
+        images[i].blurDataURL = base64;
+    }
+
+    // const { base64 } = await getPlaiceholder(post.heroImage.url);
+    // post.heroImage.blurDataURL = base64;
+
     return {
         props: {
             title: post.title,
@@ -36,6 +53,7 @@ export const getStaticProps = async () => {
             img1: post.image1,
             img2: post.image2,
             heroImg: post.heroImage,
+            metaDesc: metaDesc,
         }
     }
 }

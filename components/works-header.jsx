@@ -13,6 +13,8 @@ const WorksHeader = ({ title, heroImg }) => {
                     sizes='100vw'
                     style={{ filter: 'brightness(40%)' }}
                     priority
+                    placeholder='blur'
+                    blurDataURL={heroImg.blurDataURL}
                 />
             </figure>
             <h2 className={classes.title}>{title}</h2>

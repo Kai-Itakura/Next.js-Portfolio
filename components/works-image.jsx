@@ -12,6 +12,8 @@ const WorksImage = ({ mockUp, img1, img2 }) => {
                     width={mockUp.width}
                     height={mockUp.height}
                     sizes='90vw'
+                    placeholder='blur'
+                    blurDataURL={mockUp.blurDataURL}
                 />
             </figure>
             <ul className={classes.flexContainer}>
@@ -22,6 +24,8 @@ const WorksImage = ({ mockUp, img1, img2 }) => {
                         layout='fill'
                         objectFit='cover'
                         sizes='40vw'
+                        placeholder='blur'
+                        blurDataURL={img1.blurDataURL}
                     />
                 </li>
                 <li className={classes.compImage}>
@@ -31,6 +35,8 @@ const WorksImage = ({ mockUp, img1, img2 }) => {
                         layout='fill'
                         objectFit='cover'
                         sizes='40vw'
+                        placeholder='blur'
+                        blurDataURL={img2.blurDataURL}
                     />
                 </li>
             </ul>
