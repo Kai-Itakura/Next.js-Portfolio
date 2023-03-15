@@ -4,6 +4,7 @@ import WorksHeader from "@/components/works-header";
 import WorksImage from "@/components/works-image";
 import { getPostBySlug } from "@/lib/api";
 import { getPlaiceholder } from "plaiceholder";
+import classes from 'styles/sixhelmets.module.scss';
 
 const Sixhelmets = ({
     title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc
@@ -15,13 +16,21 @@ const Sixhelmets = ({
                 pageDesc={metaDesc}
             />
             <WorksHeader title={title} heroImg={heroImg} />
-            <WorksBody
-                title={title}
-                tools={tools}
-                desc={desc}
-                time={time}
-            />
-            <WorksImage mockUp={mockUp} img1={img1} img2={img2} />
+            <div className={classes.wrapper}>
+                <WorksBody
+                    title={title}
+                    tools={tools}
+                    desc={desc}
+                    time={time}
+                    url={url}
+                />
+                <WorksImage
+                    mockUp={mockUp}
+                    img1={img1}
+                    img2={img2}
+                    url={url}
+                />
+            </div>
         </>
     );
 }

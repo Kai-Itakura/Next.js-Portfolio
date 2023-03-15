@@ -1,1 +1,1 @@
-.wrapper{padding:100px 140px;display:flex;flex-wrap:wrap}@media screen and (max-width: 767px){.wrapper{padding:60px 24px;display:block}}
+.wrapper{display:flex;flex-wrap:wrap;padding:0 140px}@media screen and (max-width: 767px){.wrapper{display:block;padding:0 24px}}

@@ -4,13 +4,10 @@
 /* 横並び（基本形） */
 /* 横並び（中央揃え） */
 .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 140px;
+  padding: 100px 0 0;
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    display: block;
-    padding: 0 24px;
+    padding: 60px 0 0;
   }
 }

@@ -1,0 +1,17 @@
+@use 'variable' as var;
+
+.btn {
+    display: inline-block;
+    color: var.$mainColor;
+    font-family: var.$mainFont;
+    background-color: var.$accentColor;
+    padding: 15px 60px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 #514E50;
+    transition: box-shadow .25s;
+
+    &:hover {
+        opacity: 1;
+        box-shadow: 0 0 0 #514E50;
+    }
+}

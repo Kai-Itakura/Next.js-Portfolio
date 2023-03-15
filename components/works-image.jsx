@@ -1,7 +1,8 @@
 import Image from 'next/legacy/image';
 import classes from 'styles/works-image.module.scss';
+import WorksButton from './works-button';
 
-const WorksImage = ({ mockUp, img1, img2 }) => {
+const WorksImage = ({ mockUp, img1, img2, url }) => {
     return (
         <div className={classes.wrapper}>
             <figure className={classes.mockUp}>
@@ -40,6 +41,7 @@ const WorksImage = ({ mockUp, img1, img2 }) => {
                     />
                 </li>
             </ul>
+            <WorksButton url={url} />
         </div>
     );
 }

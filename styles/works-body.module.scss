@@ -1,12 +1,12 @@
 @use 'mixin' as mix;
 
 .wrapper {
-    padding: 100px 140px;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 140px;
 
     @include mix.mq(sp) {
-        padding: 60px 24px;
         display: block;
+        padding: 0 24px;
     }
 }
