@@ -2,7 +2,6 @@ import Image from 'next/legacy/image';
 import classes from 'styles/works-header.module.scss';
 
 const WorksHeader = ({ title, heroImg, lang }) => {
-    console.log(lang)
     return (
         <div className={classes.wrapper}>
             <figure className={classes.hero}>
