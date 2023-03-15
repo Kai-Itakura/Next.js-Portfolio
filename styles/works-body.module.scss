@@ -1,5 +1,10 @@
 @use 'mixin' as mix;
 
+.container {
+    padding: 100px 0;
+
+}
+
 .wrapper {
     display: flex;
     flex-wrap: wrap;

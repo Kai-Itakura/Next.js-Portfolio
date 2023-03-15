@@ -1,9 +1,0 @@
-@use 'mixin' as mix;
-
-.wrapper {
-    padding: 100px 0 0;
-
-    @include mix.mq(sp) {
-        padding: 60px 0 0;
-    }
-}

@@ -4,10 +4,9 @@ import WorksHeader from "@/components/works-header";
 import WorksImage from "@/components/works-image";
 import { getPostBySlug } from "@/lib/api";
 import { getPlaiceholder } from "plaiceholder";
-import classes from 'styles/sixhelmets.module.scss';
 
-const Sixhelmets = ({
-    title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc
+const Slug = ({
+    title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc, lang
 }) => {
     return (
         <>
@@ -15,28 +14,33 @@ const Sixhelmets = ({
                 pageTitle={title}
                 pageDesc={metaDesc}
             />
-            <WorksHeader title={title} heroImg={heroImg} />
-            <div className={classes.wrapper}>
-                <WorksBody
-                    title={title}
-                    tools={tools}
-                    desc={desc}
-                    time={time}
-                    url={url}
-                />
-                <WorksImage
-                    mockUp={mockUp}
-                    img1={img1}
-                    img2={img2}
-                    url={url}
-                />
-            </div>
+            <WorksHeader title={title} heroImg={heroImg} lang={lang} />
+            <WorksBody
+                title={title}
+                tools={tools}
+                desc={desc}
+                time={time}
+                url={url}
+            />
+            <WorksImage
+                mockUp={mockUp}
+                img1={img1}
+                img2={img2}
+                url={url}
+            />
         </>
     );
 }
 
-export const getStaticProps = async () => {
-    const slug = 'sixhelmets'
+export const getStaticPaths = async () => {
+    return {
+        paths: ['/works/sixhelmets', '/works/sugutabe'],
+        fallback: false,
+    }
+}
+
+export const getStaticProps = async (context) => {
+    const slug = context.params.slug;
 
     const post = await getPostBySlug(slug);
 
@@ -47,9 +51,6 @@ export const getStaticProps = async () => {
         const { base64 } = await getPlaiceholder(images[i].url);
         images[i].blurDataURL = base64;
     }
-
-    // const { base64 } = await getPlaiceholder(post.heroImage.url);
-    // post.heroImage.blurDataURL = base64;
 
     return {
         props: {
@@ -62,9 +63,10 @@ export const getStaticProps = async () => {
             img1: post.image1,
             img2: post.image2,
             heroImg: post.heroImage,
+            lang: post.lang,
             metaDesc: metaDesc,
         }
     }
 }
 
-export default Sixhelmets;
+export default Slug;

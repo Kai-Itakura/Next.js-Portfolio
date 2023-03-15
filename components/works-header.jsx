@@ -1,7 +1,8 @@
 import Image from 'next/legacy/image';
 import classes from 'styles/works-header.module.scss';
 
-const WorksHeader = ({ title, heroImg }) => {
+const WorksHeader = ({ title, heroImg, lang }) => {
+    console.log(lang)
     return (
         <div className={classes.wrapper}>
             <figure className={classes.hero}>
@@ -17,7 +18,7 @@ const WorksHeader = ({ title, heroImg }) => {
                     blurDataURL={heroImg.blurDataURL}
                 />
             </figure>
-            <h2 className={classes.title}>{title}</h2>
+            <h2 className={lang ? classes.jaTitle : classes.title}>{title}</h2>
         </div>
     );
 }

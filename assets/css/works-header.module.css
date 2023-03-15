@@ -33,3 +33,8 @@
     font-size: min(9vw, 5rem);
   }
 }
+
+.jaTitle {
+  composes: title;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}

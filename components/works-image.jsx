@@ -24,6 +24,7 @@ const WorksImage = ({ mockUp, img1, img2, url }) => {
                         alt=''
                         layout='fill'
                         objectFit='cover'
+                        objectPosition='50% 0'
                         sizes='40vw'
                         placeholder='blur'
                         blurDataURL={img1.blurDataURL}
@@ -35,6 +36,7 @@ const WorksImage = ({ mockUp, img1, img2, url }) => {
                         alt=''
                         layout='fill'
                         objectFit='cover'
+                        objectPosition='50% 0'
                         sizes='40vw'
                         placeholder='blur'
                         blurDataURL={img2.blurDataURL}

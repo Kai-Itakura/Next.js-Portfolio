@@ -23,6 +23,12 @@
   margin-top: 150px;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 767px) {
+  .flexContainer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
 
 .compImage {
   position: relative;
