@@ -12,6 +12,7 @@ const WorksHeader = ({ title, heroImg }) => {
                     objectFit='cover'
                     sizes='100vw'
                     style={{ filter: 'brightness(40%)' }}
+                    priority
                 />
             </figure>
             <h2 className={classes.title}>{title}</h2>

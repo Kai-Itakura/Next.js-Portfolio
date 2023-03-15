@@ -1,11 +1,22 @@
+import WorksBody from "@/components/works-body";
 import WorksHeader from "@/components/works-header";
+import WorksImage from "@/components/works-image";
 import { getPostBySlug } from "@/lib/api";
 
 const Sixhelmets = ({
     title, tools, time, desc, url, mockUp, img1, img2, heroImg
 }) => {
     return (
-        <WorksHeader title={title} heroImg={heroImg} />
+        <>
+            <WorksHeader title={title} heroImg={heroImg} />
+            <WorksBody
+                title={title}
+                tools={tools}
+                desc={desc}
+                time={time}
+            />
+            <WorksImage mockUp={mockUp} img1={img1} img2={img2} />
+        </>
     );
 }
 
