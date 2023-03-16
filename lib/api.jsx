@@ -22,11 +22,24 @@ export const getAllSlugs = async () => {
     try {
         const slugs = await client.get({
             endpoint: 'works',
-            queries: { limit: 10, fields: 'title,slug', orders: '-createdAt' },
+            queries: { limit: 10, fields: 'title,slug' },
         })
         return slugs.contents
     } catch (err) {
         console.log('~~ getAllSlugs ~~');
+        console.log(err);
+    }
+}
+
+export const getAllWorks = async () => {
+    try {
+        const allWorks = await client.get({
+            endpoint: 'works',
+            queries: { limit: 10, fields: 'title,slug,topImage' },
+        })
+        return allWorks.contents
+    } catch (err) {
+        console.log('~~ getAllWorks ~~');
         console.log(err);
     }
 }

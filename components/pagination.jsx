@@ -11,18 +11,18 @@ const Pagination = ({
 }) => {
     return (
         <ul className={classes.flexContainer}>
-            {prevText && prevUrl && (
-                <li className={classes.prev}>
-                    <Link href={prevUrl} className={classes.iconText}>
+            {nextText && nextUrl && (
+                <li>
+                    <Link href={nextUrl} className={classes.iconText}>
                         <FontAwesomeIcon icon={faChevronLeft} />
-                        <span>{prevText}</span>
+                        <span>{nextText}</span>
                     </Link>
                 </li>
             )}
-            {nextText && nextUrl && (
-                <li className={classes.next}>
-                    <Link href={nextUrl} className={classes.iconText}>
-                        <span>{nextText}</span>
+            {prevText && prevUrl && (
+                <li className={classes.prev}>
+                    <Link href={prevUrl} className={classes.iconText}>
+                        <span>{prevText}</span>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </Link>
                 </li>

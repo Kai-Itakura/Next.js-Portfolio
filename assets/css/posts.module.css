@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* メディアクエリ */
+/* 両端ん揃え */
+/* 横並び（基本形） */
+/* 横並び（中央揃え） */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 120px 80px 20px;
+  gap: 5vw;
+}
+@media screen and (max-width: 767px) {
+  .gridContainer {
+    padding: 60px 24px 0;
+  }
+}
+
+.work a:hover {
+  opacity: 1;
+}
+
+.figure {
+  position: relative;
+  aspect-ratio: 14/9;
+}
+
+.image {
+  transition: all 0.3s;
+}
+.image:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #333;
+}
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
