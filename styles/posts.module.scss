@@ -8,7 +8,9 @@
     gap: 5vw;
 
     @include mix.mq(sp) {
-        padding: 60px 24px 0;
+        padding: 80px 60px 0;
+        grid-template-columns: 1fr;
+        gap: 60px;
     }
 }
 
