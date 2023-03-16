@@ -1,12 +1,14 @@
 import Meta from "@/components/meta";
+import Pagination from "@/components/pagination";
 import WorksBody from "@/components/works-body";
 import WorksHeader from "@/components/works-header";
 import WorksImage from "@/components/works-image";
 import { getAllSlugs, getPostBySlug } from "@/lib/api";
+import { prevNextWork } from "@/lib/prev-next-work";
 import { getPlaiceholder } from "plaiceholder";
 
 const Slug = ({
-    title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc, lang
+    title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc, lang, prevWork, nextWork
 }) => {
     return (
         <>
@@ -27,6 +29,12 @@ const Slug = ({
                 img1={img1}
                 img2={img2}
                 url={url}
+            />
+            <Pagination
+                prevText={prevWork.title}
+                prevUrl={`/works/${prevWork.slug}`}
+                nextText={nextWork.title}
+                nextUrl={`/works/${nextWork.slug}`}
             />
         </>
     );
@@ -54,6 +62,9 @@ export const getStaticProps = async (context) => {
         images[i].blurDataURL = base64;
     }
 
+    const allSlugs = await getAllSlugs();
+    const [prevWork, nextWork] = prevNextWork(allSlugs, slug);
+
     return {
         props: {
             title: post.title,
@@ -67,6 +78,8 @@ export const getStaticProps = async (context) => {
             heroImg: post.heroImage,
             lang: post.lang,
             metaDesc: metaDesc,
+            prevWork: prevWork,
+            nextWork: nextWork,
         }
     }
 }
