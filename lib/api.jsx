@@ -17,3 +17,16 @@ export const getPostBySlug = async (slug) => {
         console.log(err);
     }
 }
+
+export const getAllSlugs = async () => {
+    try {
+        const slugs = await client.get({
+            endpoint: 'works',
+            queries: { limit: 10, fields: 'title,slug', orders: '-createdAt' },
+        })
+        return slugs.contents
+    } catch (err) {
+        console.log('~~ getAllSlugs ~~');
+        console.log(err);
+    }
+}

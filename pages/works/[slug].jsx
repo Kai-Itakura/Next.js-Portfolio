@@ -2,7 +2,7 @@ import Meta from "@/components/meta";
 import WorksBody from "@/components/works-body";
 import WorksHeader from "@/components/works-header";
 import WorksImage from "@/components/works-image";
-import { getPostBySlug } from "@/lib/api";
+import { getAllSlugs, getPostBySlug } from "@/lib/api";
 import { getPlaiceholder } from "plaiceholder";
 
 const Slug = ({
@@ -33,8 +33,10 @@ const Slug = ({
 }
 
 export const getStaticPaths = async () => {
+    const allSlugs = await getAllSlugs();
+
     return {
-        paths: ['/works/sixhelmets', '/works/sugutabe'],
+        paths: allSlugs.map(({ slug }) => `/works/${slug}`),
         fallback: false,
     }
 }
