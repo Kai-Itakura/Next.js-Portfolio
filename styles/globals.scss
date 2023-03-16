@@ -41,9 +41,20 @@ a {
     text-decoration: none;
     color: inherit;
 
-    &:hover {
-        opacity: 0.5;
-        cursor: pointer;
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+
+    @media (hover: none) {
+        -webkit-tap-highlight-color: transparent;
+        opacity: 1;
+
+        &:active {
+            opacity: .5;
+        }
     }
 }
 
