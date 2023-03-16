@@ -26,10 +26,6 @@
     a {
         font-size: 2.5rem;
 
-        &:hover {
-            opacity: 1;
-        }
-
         @include mix.mq(sp) {
             font-size: 1.8rem;
         }
