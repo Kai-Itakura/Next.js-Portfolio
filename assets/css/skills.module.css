@@ -4,23 +4,23 @@
 /* 横並び（基本形） */
 /* 横並び（中央揃え） */
 .wrapper {
-  padding: 100px 30px 10px;
+  padding: 120px 30px 60px;
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding: 60px 24px 0;
+    padding: 100px 24px 60px;
   }
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-  margin-top: 100px;
+  gap: 70px;
 }
 @media screen and (max-width: 767px) {
   .list {
-    margin-top: 60px;
-    display: block;
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }

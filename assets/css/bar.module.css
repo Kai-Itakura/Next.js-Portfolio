@@ -4,14 +4,7 @@
 /* 横並び（基本形） */
 /* 横並び（中央揃え） */
 .wrapper {
-  width: 46%;
-  margin: 0 auto 70px;
-}
-@media screen and (max-width: 767px) {
-  .wrapper {
-    width: 100%;
-    margin-bottom: 60px;
-  }
+  width: 100%;
 }
 
 .title {

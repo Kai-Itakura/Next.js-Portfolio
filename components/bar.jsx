@@ -1,5 +1,5 @@
 import Image from 'next/legacy/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import classes from 'styles/bar.module.scss';
 
 const Bar = ({ title, src, dataPer }) => {
@@ -13,13 +13,13 @@ const Bar = ({ title, src, dataPer }) => {
         refBar.current = Array.from(allBar);
         refNum.current = Array.from(allNum);
 
-        if (!refBar.current.length) return; 
+        if (!refBar.current.length) return;
 
         for (let i = 0; i < refBar.current.length; i++) {
             let flag = false;
 
             document.addEventListener('scroll', () => {
-                if (!refBar.current) return; 
+                if (!refBar.current) return;
                 const getElementDistance = refBar.current[i].getBoundingClientRect().bottom;
 
                 if (window.innerHeight > getElementDistance && flag != true) {

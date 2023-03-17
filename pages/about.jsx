@@ -1,3 +1,4 @@
+import Container from "@/components/constainer";
 import Hero from "@/components/hero";
 import Hobby from "@/components/hobby";
 import Meta from "@/components/meta";
@@ -9,9 +10,15 @@ const About = () => {
         <>
             <Meta pageTitle='About' />
             <Hero title='About' subtitle='私について' backGround='blue' />
-            <Profile />
-            <Skills />
-            <Hobby />
+            <Container title='profile'>
+                <Profile />
+            </Container>
+            <Container title='skills'>
+                <Skills />
+            </Container>
+            <Container title='hobby'>
+                <Hobby />
+            </Container>
         </>
     );
 }

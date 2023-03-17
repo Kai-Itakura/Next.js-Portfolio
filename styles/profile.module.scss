@@ -1,18 +1,10 @@
 @use 'mixin' as mix;
 
 .wrapper {
-    padding: 100px 80px;
+    padding: 120px 80px 60px;
 
     @include mix.mq(sp) {
-        padding: 60px 24px;
-    }
-}
-
-.title {
-    margin-bottom: 100px;
-
-    @include mix.mq(sp) {
-        margin-bottom: 60px;
+        padding: 100px 24px 60px;
     }
 }
 

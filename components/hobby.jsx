@@ -7,7 +7,6 @@ import soccer from 'images/soccer.jpg';
 const Hobby = () => {
     return (
         <div className={classes.wrapper}>
-            <h2>hobby</h2>
             <ul className={classes.list}>
                 <HobbyList
                     src={dance}

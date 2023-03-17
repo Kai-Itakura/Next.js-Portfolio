@@ -5,7 +5,6 @@ import profile from 'images/profile-image.jpg';
 const Profile = () => {
     return (
         <div className={classes.wrapper}>
-            <h2 className={classes.title}>Profile</h2>
             <div className={classes.flexContainer}>
                 <figure>
                     <Image

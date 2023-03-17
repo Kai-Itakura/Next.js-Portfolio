@@ -4,20 +4,11 @@
 /* 横並び（基本形） */
 /* 横並び（中央揃え） */
 .wrapper {
-  padding: 100px 80px;
+  padding: 120px 80px 60px;
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding: 60px 24px;
-  }
-}
-
-.title {
-  margin-bottom: 100px;
-}
-@media screen and (max-width: 767px) {
-  .title {
-    margin-bottom: 60px;
+    padding: 100px 24px 60px;
   }
 }
 

@@ -4,9 +4,7 @@
 /* 横並び（基本形） */
 /* 横並び（中央揃え） */
 .wrapper {
-  width: 30%;
-  min-width: 340px;
-  margin-bottom: 5%;
+  width: 25%;
 }
 @media screen and (max-width: 767px) {
   .wrapper {
@@ -27,7 +25,7 @@
 }
 @media screen and (max-width: 767px) {
   .image {
-    width: 70%;
+    width: 55%;
   }
 }
 
@@ -40,7 +38,7 @@
 
 .description {
   text-align: left;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 @media screen and (max-width: 767px) {

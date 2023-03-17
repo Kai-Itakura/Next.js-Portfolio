@@ -4,7 +4,6 @@ import Bar from './bar';
 const Skills = () => {
     return (
         <div className={classes.wrapper}>
-            <h2>skills</h2>
             <ul className={classes.list}>
                 <Bar
                     title='HTML/CSS'
