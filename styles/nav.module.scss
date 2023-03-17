@@ -14,10 +14,6 @@
     display: grid;
     place-items: center;
 
-    &:hover {
-        opacity: .5;
-    }
-
     @include mix.mq(pc) {
         display: none;
     }
