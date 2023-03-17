@@ -14,4 +14,19 @@
         opacity: 1;
         box-shadow: 0 0 0 #514E50;
     }
+
+    a:hover {
+        opacity: 1;
+    }
+}
+
+.btnLocal {
+    composes: btn;
+    margin: 60px 0;
+}
+
+.iconText {
+    display: flex;
+    gap: .5em;
+    align-items: center;
 }

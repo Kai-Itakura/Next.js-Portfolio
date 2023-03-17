@@ -1,3 +1,4 @@
+import Button from "@/components/button";
 import Hero from "@/components/hero";
 import Meta from "@/components/meta";
 import Posts from "@/components/posts";

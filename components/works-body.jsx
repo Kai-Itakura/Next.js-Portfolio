@@ -1,6 +1,6 @@
 import classes from 'styles/works-body.module.scss';
 import DefinitionList from './definition-list';
-import WorksButton from './works-button';
+import Button from './button';
 
 const WorksBody = ({ title, tools, time, desc, url }) => {
     return (
@@ -11,7 +11,7 @@ const WorksBody = ({ title, tools, time, desc, url }) => {
                 <DefinitionList title='creation time' desc={time} ja />
                 <DefinitionList title='about' desc={desc} ja />
             </dl>
-            <WorksButton url={url} />
+            <Button url={url} />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import Image from 'next/legacy/image';
 import classes from 'styles/works-image.module.scss';
-import WorksButton from './works-button';
+import Button from './button';
 
 const WorksImage = ({ mockUp, img1, img2, url }) => {
     return (
@@ -43,7 +43,7 @@ const WorksImage = ({ mockUp, img1, img2, url }) => {
                     />
                 </li>
             </ul>
-            <WorksButton url={url} />
+            <Button url={url} />
         </div>
     );
 }
