@@ -11,9 +11,19 @@ const Skills = () => {
                     dataPer={80}
                 />
                 <Bar
+                    title='Next.js'
+                    src='/nextjs.svg'
+                    dataPer={70}
+                />
+                <Bar
+                    title='React'
+                    src='/react.svg'
+                    dataPer={60}
+                />
+                <Bar
                     title='JavaScript'
                     src='/javascript-icon.svg'
-                    dataPer={60}
+                    dataPer={70}
                 />
                 <Bar
                     title='Sass'
