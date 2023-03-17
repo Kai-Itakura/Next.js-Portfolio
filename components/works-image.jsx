@@ -7,6 +7,7 @@ const WorksImage = ({ mockUp, img1, img2, url }) => {
         <div className={classes.wrapper}>
             <figure className={classes.mockUp}>
                 <Image
+                    key={mockUp.url}
                     src={mockUp.url}
                     alt=''
                     layout='responsive'
@@ -20,6 +21,7 @@ const WorksImage = ({ mockUp, img1, img2, url }) => {
             <ul className={classes.flexContainer}>
                 <li className={classes.compImage}>
                     <Image
+                        key={img1.url}
                         src={img1.url}
                         alt=''
                         layout='fill'
@@ -32,6 +34,7 @@ const WorksImage = ({ mockUp, img1, img2, url }) => {
                 </li>
                 <li className={classes.compImage}>
                     <Image
+                        key={img2.url}
                         src={img2.url}
                         alt=''
                         layout='fill'

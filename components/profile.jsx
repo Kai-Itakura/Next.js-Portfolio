@@ -8,6 +8,7 @@ const Profile = () => {
             <div className={classes.flexContainer}>
                 <figure>
                     <Image
+                        key={profile}
                         src={profile}
                         alt='板倉海'
                         layout='fill'

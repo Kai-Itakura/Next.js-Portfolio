@@ -11,6 +11,7 @@ const Posts = ({ allWorks }) => {
                         <Link href={`/works/${slug}`}>
                             <figure className={classes.figure}>
                                 <Image
+                                    key={topImage.url}
                                     src={topImage.url}
                                     alt={title}
                                     layout='fill'
@@ -30,6 +31,7 @@ const Posts = ({ allWorks }) => {
                     <Link href={`/works/${allWorks.slug}`}>
                         <figure className={classes.figure}>
                             <Image
+                                key={allWorks.topImage.url}
                                 src={allWorks.topImage.url}
                                 alt={allWorks.title}
                                 layout='fill'

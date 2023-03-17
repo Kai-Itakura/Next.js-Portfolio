@@ -6,6 +6,7 @@ const HobbyList = ({ src, title, desc }) => {
         <li className={classes.wrapper}>
             <figure className={classes.image}>
                 <Image
+                    key={src}
                     src={src}
                     alt={title}
                     layout='fill'

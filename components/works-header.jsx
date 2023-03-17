@@ -6,6 +6,7 @@ const WorksHeader = ({ title, heroImg, lang }) => {
         <div className={classes.wrapper}>
             <figure className={classes.hero}>
                 <Image
+                    key={heroImg.url}
                     src={heroImg.url}
                     alt={title}
                     layout='fill'
