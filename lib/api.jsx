@@ -31,11 +31,11 @@ export const getAllSlugs = async () => {
     }
 }
 
-export const getAllWorks = async () => {
+export const getAllWorks = async (limit = 10) => {
     try {
         const allWorks = await client.get({
             endpoint: 'works',
-            queries: { limit: 10, fields: 'title,slug,topImage' },
+            queries: { limit: limit, fields: 'title,slug,topImage' },
         })
         return allWorks.contents
     } catch (err) {
