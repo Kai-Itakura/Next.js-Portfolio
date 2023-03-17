@@ -12,19 +12,15 @@ const Button = ({ url, local = false, btnText }) => {
     return (
         <>
             {local ? (
-                <div className={classes.btnLocal} >
-                    <Link className={classes.iconText} href={url}>
-                        <span>{btnText}</span>
-                        <FontAwesomeIcon icon={faForward} />
-                    </Link>
-                </div>
+                <Link className={classes.btnLocal} href={url}>
+                    <span>{btnText}</span>
+                    <FontAwesomeIcon icon={faForward} />
+                </Link>
             ) : (
-                <div className={classes.btn}>
-                    <a className={classes.iconText} href={url} target='_blank' rel='noopener noreferrer'>
-                        <span>Visit Website</span>
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
-                </div>
+                <a className={classes.btn} href={url} target='_blank' rel='noopener noreferrer'>
+                    <span>Visit Website</span>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                </a>
             )}
         </>
     )

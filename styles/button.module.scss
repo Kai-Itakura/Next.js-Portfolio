@@ -1,7 +1,6 @@
 @use 'variable' as var;
 
 .btn {
-    display: inline-block;
     color: var.$mainColor;
     font-family: var.$mainFont;
     background-color: var.$accentColor;
@@ -9,10 +8,17 @@
     border-radius: 5px;
     box-shadow: 5px 5px 0 #514E50;
     transition: box-shadow .25s;
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
 
     &:hover {
         opacity: 1;
         box-shadow: 0 0 0 #514E50;
+        cursor: pointer;
     }
 
     a:hover {
@@ -22,11 +28,5 @@
 
 .btnLocal {
     composes: btn;
-    margin: 60px 0;
-}
-
-.iconText {
-    display: flex;
-    gap: .5em;
-    align-items: center;
+    margin: 0 auto 60px auto;
 }
