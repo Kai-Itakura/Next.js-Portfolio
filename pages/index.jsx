@@ -4,14 +4,33 @@ import Posts from "@/components/posts";
 import Button from "@/components/button";
 import { getAllWorks } from "@/lib/api";
 import { getPlaiceholder } from "plaiceholder";
+import Container from "@/components/constainer";
+import { useEffect, useState } from "react";
 
 const Home = ({ works }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const numWorks = isMobile ? works[0] : works;
+
   return (
     <>
       <Meta />
       <Hero title='Kai Itakura' subtitle='Web Creator' />
-      <Posts allWorks={works} />
-      <Button url='/works' local btnText='More Works' />
+      <Container title='works'>
+        <Posts allWorks={numWorks} />
+        <Button url='/works' local btnText='More Works' />
+      </Container>
     </>
   );
 }

@@ -1,0 +1,13 @@
+@use 'mixin' as mix;
+
+.container {
+    padding: 120px 0 10px;
+
+    @include mix.mq(sp) {
+        padding: 100px 0 0;
+    }
+}
+
+.title {
+    margin-bottom: -40px;
+}
