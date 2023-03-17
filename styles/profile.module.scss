@@ -19,6 +19,7 @@
 .flexContainer {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 
     @include mix.mq(sp) {
         display: block;
@@ -36,14 +37,14 @@
         @include mix.mq(sp) {
             min-width: auto;
             max-width: 300px;
-            width: 70%;
+            width: 55%;
             margin: 0 auto 40px;
             box-shadow: 20px 10px 100px -20px rgb(7 33 66 / 50%);
         }
     }
 
     .description {
-        width: 30%;
+        width: 40%;
         text-align: left;
         min-width: 320px;
 
