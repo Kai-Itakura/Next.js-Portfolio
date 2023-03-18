@@ -28,6 +28,7 @@ const Meta = ({ pageTitle, pageDesc }) => {
             <link rel="apple-touch-icon" href={appleTouchIcon} />
             <meta property="og:image" content={imgUrl} />
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="google-site-verification" content="NNNsuX41_1FbiLGiscTOFlclVFO3CYMPXODEQW-BQ_E" />
         </Head>
     );
 }
