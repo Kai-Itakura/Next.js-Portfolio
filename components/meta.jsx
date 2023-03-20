@@ -27,6 +27,8 @@ const Meta = ({ pageTitle, pageDesc }) => {
             <link rel="icon" href={siteIcon} />
             <link rel="apple-touch-icon" href={appleTouchIcon} />
             <meta property="og:image" content={imgUrl} />
+            <meta property="og:image:width" content={siteImg.width} />
+            <meta property="og:image:height" content={siteImg.height} />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="google-site-verification" content="NNNsuX41_1FbiLGiscTOFlclVFO3CYMPXODEQW-BQ_E" />
         </Head>
