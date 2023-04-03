@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
             gtag('js', new Date());
 
             gtag('config', '${gtag.GA_MEASUREMENT_ID}');
-          `,
+          `
         }}
       />
       <Layout>
