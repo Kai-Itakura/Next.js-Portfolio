@@ -1,5 +1,5 @@
-import Layout from '@/components/layout'
-import '@/styles/globals.scss'
+import Layout from 'components/layout'
+import 'styles/globals.scss'
 import 'modern-css-reset/dist/reset.min.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 config.autoAddCss = false
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
+  const router = useRouter()
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.preview(url)
@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  },[router.events])
+  }, [router.events])
 
   return (
     <>
