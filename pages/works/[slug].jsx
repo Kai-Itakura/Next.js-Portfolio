@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: allSlugs.map(({ slug }) => `/works/${slug}`),
-    fallback: false,
+    fallback: false
   }
 }
 
@@ -63,8 +63,8 @@ export const getStaticProps = async (context) => {
       lang: post.lang,
       metaDesc: metaDesc,
       prevWork: prevWork,
-      nextWork: nextWork,
-    },
+      nextWork: nextWork
+    }
   }
 }
 

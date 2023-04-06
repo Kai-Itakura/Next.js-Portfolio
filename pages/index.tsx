@@ -7,8 +7,9 @@ import { getPlaiceholder } from 'plaiceholder'
 import Container from 'components/constainer'
 import { useEffect, useState } from 'react'
 import Profile from 'components/profile'
+import { GetStaticProps, NextPage } from 'next'
 
-const Home = ({ works }) => {
+const Home: NextPage = ({ works }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -40,7 +41,7 @@ const Home = ({ works }) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const works = await getAllWorks(2)
 
   for (const work of works) {
@@ -50,8 +51,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      works: works,
-    },
+      works: works
+    }
   }
 }
 
