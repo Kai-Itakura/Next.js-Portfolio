@@ -1,7 +1,7 @@
-import Container from 'components/constainer'
-import Hero from 'components/hero'
+import Container from '@/components/container'
+import Hero from '@/components/hero'
 import Hobby from 'components/hobby'
-import Meta from 'components/meta'
+import Meta from '@/components/meta'
 import Profile from 'components/profile'
 import Skills from 'components/skills'
 

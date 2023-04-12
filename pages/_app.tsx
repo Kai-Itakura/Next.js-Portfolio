@@ -7,12 +7,13 @@ import Script from 'next/script'
 import * as gtag from 'lib/gtag'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { AppProps } from 'next/app'
 config.autoAddCss = false
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
       gtag.preview(url)
     }
     router.events.on('routeChangeComplete', handleRouteChange)
@@ -37,7 +38,7 @@ export default function App({ Component, pageProps }) {
             gtag('js', new Date());
 
             gtag('config', '${gtag.GA_MEASUREMENT_ID}');
-          `,
+          `
         }}
       />
       <Layout>

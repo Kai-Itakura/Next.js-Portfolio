@@ -1,4 +1,4 @@
-import Meta from 'components/meta'
+import Meta from '@/components/meta'
 import Pagination from 'components/pagination'
 import WorksBody from 'components/works-body'
 import WorksHeader from 'components/works-header'
@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: allSlugs.map(({ slug }) => `/works/${slug}`),
-    fallback: false,
+    fallback: false
   }
 }
 
@@ -63,8 +63,8 @@ export const getStaticProps = async (context) => {
       lang: post.lang,
       metaDesc: metaDesc,
       prevWork: prevWork,
-      nextWork: nextWork,
-    },
+      nextWork: nextWork
+    }
   }
 }
 
