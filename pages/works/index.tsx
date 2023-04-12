@@ -2,9 +2,12 @@ import Hero from '@/components/hero'
 import Meta from '@/components/meta'
 import Posts from 'components/posts'
 import { getAllWorks } from 'lib/api'
+import { InferGetStaticPropsType, NextPage } from 'next'
 import { getPlaiceholder } from 'plaiceholder'
 
-const Works = ({ allWorks }) => {
+type Props = InferGetStaticPropsType<typeof getStaticProps>
+
+const Works: NextPage<Props> = ({ allWorks }) => {
   return (
     <>
       <Meta pageTitle='Works' pageDesc='これまでに作った作品一覧' />
