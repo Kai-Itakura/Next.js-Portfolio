@@ -7,7 +7,12 @@ const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, appleTouchIcon, site
 
 const imgUrl = `${siteUrl}${siteImg.src}`
 
-const Meta = ({ pageTitle, pageDesc }) => {
+interface MetaProps {
+  pageTitle?: string
+  pageDesc?: string
+}
+
+const Meta = ({ pageTitle, pageDesc }: MetaProps) => {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
   const desc = pageDesc ?? siteDesc
   const router = useRouter()
@@ -27,8 +32,8 @@ const Meta = ({ pageTitle, pageDesc }) => {
       <link rel='icon' href={siteIcon} />
       <link rel='apple-touch-icon' href={appleTouchIcon} />
       <meta property='og:image' content={imgUrl} />
-      <meta property='og:image:width' content={siteImg.width} />
-      <meta property='og:image:height' content={siteImg.height} />
+      <meta property='og:image:width' content={siteImg.width.toString()} />
+      <meta property='og:image:height' content={siteImg.height.toString()} />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='google-site-verification' content='NNNsuX41_1FbiLGiscTOFlclVFO3CYMPXODEQW-BQ_E' />
     </Head>

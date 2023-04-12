@@ -1,15 +1,17 @@
-import Hero from 'components/hero'
-import Meta from 'components/meta'
+import Hero from '@/components/hero'
+import Meta from '@/components/meta'
 import Posts from 'components/posts'
 import Button from 'components/button'
 import { getAllWorks } from 'lib/api'
 import { getPlaiceholder } from 'plaiceholder'
-import Container from 'components/constainer'
+import Container from '@/components/container'
 import { useEffect, useState } from 'react'
 import Profile from 'components/profile'
-import { GetStaticProps, NextPage } from 'next'
+import { InferGetStaticPropsType, NextPage } from 'next'
 
-const Home: NextPage = ({ works }) => {
+type Props = InferGetStaticPropsType<typeof getStaticProps>
+
+const Home: NextPage<Props> = ({ works }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const Home: NextPage = ({ works }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps = async () => {
   const works = await getAllWorks(2)
 
   for (const work of works) {

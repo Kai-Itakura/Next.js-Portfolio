@@ -1,4 +1,5 @@
 import { createClient } from 'microcms-js-sdk'
+import type { allWorksContent } from 'types/Type'
 
 export const client = createClient({
   serviceDomain: process.env.SERVICE_DOMAIN || '',
@@ -31,7 +32,7 @@ export const getAllSlugs = async () => {
   }
 }
 
-export const getAllWorks = async (limit = 10) => {
+export const getAllWorks = async (limit = 10): Promise<allWorksContent[]> => {
   try {
     const allWorks = await client.get({
       endpoint: 'works',
@@ -41,5 +42,6 @@ export const getAllWorks = async (limit = 10) => {
   } catch (err) {
     console.log('~~ getAllWorks ~~')
     console.log(err)
+    throw err
   }
 }

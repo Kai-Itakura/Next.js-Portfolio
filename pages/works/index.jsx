@@ -1,5 +1,5 @@
-import Hero from 'components/hero'
-import Meta from 'components/meta'
+import Hero from '@/components/hero'
+import Meta from '@/components/meta'
 import Posts from 'components/posts'
 import { getAllWorks } from 'lib/api'
 import { getPlaiceholder } from 'plaiceholder'
