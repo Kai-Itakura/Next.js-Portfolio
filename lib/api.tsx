@@ -1,11 +1,11 @@
 import { createClient } from 'microcms-js-sdk'
 
 export const client = createClient({
-  serviceDomain: process.env.SERVICE_DOMAIN,
-  apiKey: process.env.API_KEY
+  serviceDomain: process.env.SERVICE_DOMAIN || '',
+  apiKey: process.env.API_KEY || ''
 })
 
-export const getPostBySlug = async (slug) => {
+export const getPostBySlug = async (slug: string) => {
   try {
     const post = await client.get({
       endpoint: 'works',
