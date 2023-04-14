@@ -88,6 +88,19 @@ type PaginationContent = {
   nextUrl: string
 }
 
+type WorksHeaderContent = {
+  title: string
+  heroImg: Image
+  lang: boolean
+}
+
+type WorksImageContent = {
+  mockUp: Image
+  img1: Image
+  img2: Image
+  url: string
+}
+
 export type {
   allWorksContent,
   HeroProps,
@@ -100,5 +113,7 @@ export type {
   WorksBodyContent,
   HobbyListContent,
   LayoutContent,
-  PaginationContent
+  PaginationContent,
+  WorksHeaderContent,
+  WorksImageContent
 }

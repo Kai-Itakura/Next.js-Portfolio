@@ -2,13 +2,13 @@ import Image from 'next/legacy/image'
 import classes from 'styles/profile.module.scss'
 import profile from 'images/profile-image.jpg'
 
-const Profile = () => {
+const Profile: React.FC = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.flexContainer}>
         <figure>
           <Image
-            key={profile}
+            key={profile.src}
             src={profile}
             alt='板倉海'
             layout='fill'

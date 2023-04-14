@@ -6,7 +6,7 @@ import { getAllWorks } from 'lib/api'
 import { getPlaiceholder } from 'plaiceholder'
 import Container from '@/components/container'
 import { useEffect, useState } from 'react'
-import Profile from 'components/profile'
+import Profile from '@/components/profile'
 import { InferGetStaticPropsType, NextPage } from 'next'
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
