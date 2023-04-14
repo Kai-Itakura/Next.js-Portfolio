@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { siteMeta } from 'lib/constants'
+import { siteMeta } from '@/lib/constants'
 import { useRouter } from 'next/router'
 import siteImg from 'images/portfolio.png'
 
@@ -12,7 +12,7 @@ interface MetaProps {
   pageDesc?: string
 }
 
-const Meta = ({ pageTitle, pageDesc }: MetaProps) => {
+const Meta: React.FC<MetaProps> = ({ pageTitle, pageDesc }) => {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
   const desc = pageDesc ?? siteDesc
   const router = useRouter()

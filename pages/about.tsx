@@ -1,11 +1,12 @@
 import Container from '@/components/container'
 import Hero from '@/components/hero'
-import Hobby from 'components/hobby'
+import Hobby from '@/components/hobby'
 import Meta from '@/components/meta'
-import Profile from 'components/profile'
-import Skills from 'components/skills'
+import Profile from '@/components/profile'
+import Skills from '@/components/skills'
+import { NextPage } from 'next'
 
-const About = () => {
+const About: NextPage = () => {
   return (
     <>
       <Meta pageTitle='About' />

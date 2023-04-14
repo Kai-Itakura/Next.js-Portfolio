@@ -1,13 +1,30 @@
 import Meta from '@/components/meta'
-import Pagination from 'components/pagination'
-import WorksBody from 'components/works-body'
-import WorksHeader from 'components/works-header'
-import WorksImage from 'components/works-image'
+import Pagination from '@/components/pagination'
+import WorksBody from '@/components/works-body'
+import WorksHeader from '@/components/works-header'
+import WorksImage from '@/components/works-image'
 import { getAllSlugs, getPostBySlug } from 'lib/api'
-import { prevNextWork } from 'lib/prev-next-work'
+import { prevNextWork } from '@/lib/prev-next-work'
 import { getPlaiceholder } from 'plaiceholder'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 
-const Slug = ({ title, tools, time, desc, url, mockUp, img1, img2, heroImg, metaDesc, lang, prevWork, nextWork }) => {
+type SlugPageProps = InferGetStaticPropsType<typeof getStaticProps>
+
+const Slug: NextPage<SlugPageProps> = ({
+  title,
+  tools,
+  time,
+  desc,
+  url,
+  mockUp,
+  img1,
+  img2,
+  heroImg,
+  metaDesc,
+  lang,
+  prevWork,
+  nextWork
+}) => {
   return (
     <>
       <Meta pageTitle={title} pageDesc={metaDesc} />
@@ -24,7 +41,7 @@ const Slug = ({ title, tools, time, desc, url, mockUp, img1, img2, heroImg, meta
   )
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const allSlugs = await getAllSlugs()
 
   return {
@@ -33,8 +50,12 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async (context) => {
-  const slug = context.params.slug
+export const getStaticProps: GetStaticProps = async (context) => {
+  const slug = context?.params?.slug
+
+  if (typeof slug != 'string') {
+    throw new Error('No slug provide in context')
+  }
 
   const post = await getPostBySlug(slug)
 

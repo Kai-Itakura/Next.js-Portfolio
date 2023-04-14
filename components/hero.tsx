@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import classes from 'styles/hero.module.scss'
 import { HeroProps } from '@/types/Type'
 
-const Hero = ({ title, subtitle = false, backGround }: HeroProps) => {
+const Hero: React.FC<HeroProps> = ({ title, subtitle = false, backGround }) => {
   useEffect(() => {
     const bubbleArea: HTMLElement | null = document.querySelector('#bubble-area')
 

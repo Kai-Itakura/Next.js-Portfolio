@@ -1,12 +1,12 @@
 import { createClient } from 'microcms-js-sdk'
-import type { allWorksContent } from 'types/Type'
+import type { PostContent, allSlugsContent, allWorksContent } from 'types/Type'
 
 export const client = createClient({
   serviceDomain: process.env.SERVICE_DOMAIN || '',
   apiKey: process.env.API_KEY || ''
 })
 
-export const getPostBySlug = async (slug: string) => {
+export const getPostBySlug = async (slug: string): Promise<PostContent> => {
   try {
     const post = await client.get({
       endpoint: 'works',
@@ -16,10 +16,11 @@ export const getPostBySlug = async (slug: string) => {
   } catch (err) {
     console.log('~~ getPostBySlug ~~')
     console.log(err)
+    throw err
   }
 }
 
-export const getAllSlugs = async () => {
+export const getAllSlugs = async (): Promise<allSlugsContent[]> => {
   try {
     const slugs = await client.get({
       endpoint: 'works',
@@ -29,6 +30,7 @@ export const getAllSlugs = async () => {
   } catch (err) {
     console.log('~~ getAllSlugs ~~')
     console.log(err)
+    throw err
   }
 }
 
