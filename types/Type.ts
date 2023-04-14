@@ -37,4 +37,10 @@ type HeroProps = {
   backGround?: string
 }
 
-export type { allWorksContent, HeroProps, allSlugsContent, PostContent }
+type BarContent = {
+  title: string
+  src: string
+  dataPer: number
+}
+
+export type { allWorksContent, HeroProps, allSlugsContent, PostContent, BarContent }
