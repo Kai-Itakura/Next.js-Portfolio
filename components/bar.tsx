@@ -3,7 +3,7 @@ import Image from 'next/legacy/image'
 import { useEffect } from 'react'
 import classes from 'styles/bar.module.scss'
 
-const Bar = ({ title, src, dataPer }: BarContent) => {
+const Bar: React.FC<BarContent> = ({ title, src, dataPer }) => {
   useEffect(() => {
     const allBar: NodeListOf<HTMLElement> = document.querySelectorAll('[data-percentage]')
     const allNum: NodeListOf<HTMLElement> = document.querySelectorAll('[data-num]')

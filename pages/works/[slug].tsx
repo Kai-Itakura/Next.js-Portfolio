@@ -1,6 +1,6 @@
 import Meta from '@/components/meta'
-import Pagination from 'components/pagination'
-import WorksBody from 'components/works-body'
+import Pagination from '@/components/pagination'
+import WorksBody from '@/components/works-body'
 import WorksHeader from 'components/works-header'
 import WorksImage from 'components/works-image'
 import { getAllSlugs, getPostBySlug } from 'lib/api'

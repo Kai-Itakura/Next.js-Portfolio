@@ -1,6 +1,6 @@
 import Hero from '@/components/hero'
 import Meta from '@/components/meta'
-import Posts from 'components/posts'
+import Posts from '@/components/posts'
 import { getAllWorks } from 'lib/api'
 import { InferGetStaticPropsType, NextPage } from 'next'
 import { getPlaiceholder } from 'plaiceholder'

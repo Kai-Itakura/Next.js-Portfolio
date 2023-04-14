@@ -1,3 +1,6 @@
+import { StaticImageData } from 'next/image'
+import { ReactNode } from 'react'
+
 type Image = {
   url: string
   height: number
@@ -25,6 +28,12 @@ type allSlugsContent = {
   slug: string
 }
 
+type HobbyListContent = {
+  src: StaticImageData
+  title: string
+  desc: string
+}
+
 type allWorksContent = {
   title: string
   slug: string
@@ -43,4 +52,53 @@ type BarContent = {
   dataPer: number
 }
 
-export type { allWorksContent, HeroProps, allSlugsContent, PostContent, BarContent }
+type ButtonContent = {
+  url: string
+  local?: boolean
+  btnText?: string
+}
+
+type DefinitionListContent = {
+  title: string
+  desc: string | string[]
+  ja?: boolean
+}
+
+type ContainerContent = {
+  title: string
+  children: ReactNode
+}
+
+type WorksBodyContent = {
+  title: string
+  tools: string
+  time: string
+  desc: string | string[]
+  url: string
+}
+
+type LayoutContent = {
+  children: ReactNode
+}
+
+type PaginationContent = {
+  prevText: string
+  nextText: string
+  prevUrl: string
+  nextUrl: string
+}
+
+export type {
+  allWorksContent,
+  HeroProps,
+  allSlugsContent,
+  PostContent,
+  BarContent,
+  ButtonContent,
+  ContainerContent,
+  DefinitionListContent,
+  WorksBodyContent,
+  HobbyListContent,
+  LayoutContent,
+  PaginationContent
+}

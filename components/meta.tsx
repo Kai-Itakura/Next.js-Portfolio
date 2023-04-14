@@ -12,7 +12,7 @@ interface MetaProps {
   pageDesc?: string
 }
 
-const Meta = ({ pageTitle, pageDesc }: MetaProps) => {
+const Meta: React.FC<MetaProps> = ({ pageTitle, pageDesc }) => {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
   const desc = pageDesc ?? siteDesc
   const router = useRouter()

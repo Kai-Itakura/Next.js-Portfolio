@@ -1,7 +1,7 @@
 import Hero from '@/components/hero'
 import Meta from '@/components/meta'
-import Posts from 'components/posts'
-import Button from 'components/button'
+import Posts from '@/components/posts'
+import Button from '@/components/button'
 import { getAllWorks } from 'lib/api'
 import { getPlaiceholder } from 'plaiceholder'
 import Container from '@/components/container'
@@ -25,14 +25,14 @@ const Home: NextPage<Props> = ({ works }) => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const numWorks = isMobile ? works[0] : works
+  const worksNum = isMobile ? works[0] : works
 
   return (
     <>
       <Meta />
       <Hero title='Kai Itakura' subtitle='Web Creator' />
       <Container title='works'>
-        <Posts allWorks={numWorks} />
+        <Posts allWorks={worksNum} />
         <Button url='/works' local btnText='More Works' />
       </Container>
       <Container title='about'>
